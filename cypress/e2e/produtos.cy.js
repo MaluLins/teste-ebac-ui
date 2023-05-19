@@ -29,7 +29,7 @@ var quantidade = 3
     });
     
 it.only('Deve adicionar produtos ao carrinho - Usando Comando customizado', () => {
-    cy.addProdutos('Aero Daily Fitness Tee', 'M', 'Black', 2)
+    cy.addProdutos('Aero Daily Fitness Tee', 'XL', 'Black', 2)
 });
 
 });

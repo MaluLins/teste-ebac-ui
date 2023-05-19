@@ -1,4 +1,5 @@
 /// <reference types="cypress" /> 
+import EnderecoPage from '../support/page-objects/endereco.page'
 
 describe('Funcionalidade Endereços - Faturamento e Entrega', () => {
 beforeEach(() => {
@@ -10,9 +11,9 @@ beforeEach(() => {
     
 });
 
-    it('Deve fazer cadastro de faturamento com sucesso - Usando fixture', () => {
-        
-        //cadastro de endereço
+    it.only('Deve fazer cadastro de faturamento com sucesso - Usando fixture', () => {
+        EnderecoPage.editarEnderecoFaturamento('Malu', 'Lins', 'Intera', 'Brasil', 'Av Orlando Gomes', '2002', 'Salvador', 'Bahia', '41650010', '719', 'Mwlins4@hotmail.com')
+        cy.get('.woocommerce-message').should('contain', 'Endereço alterado com sucesso')
     });
 });
 
